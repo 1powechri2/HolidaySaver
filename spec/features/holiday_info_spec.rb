@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe 'Setup test to check Travis CI' do
-  context 'root page' do
-    it 'says hello world' do
+describe 'A user visits the' do
+  context 'root page and it' do
+    it 'tells us holiday information' do
       VCR.use_cassette('holidays') do
         visit '/'
 
