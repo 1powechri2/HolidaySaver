@@ -25,4 +25,31 @@ describe 'User visits root' do
       expect(page).to have_content('Welcome ChrisPowell')
     end
   end
+  it 'logs in' do
+    VCR.use_cassette('log_in') do
+      user = User.create(user_name: 'ChrisPowell',
+                        password: 'BigPapa978',
+                        email: 'dood@doodmail.grrrr')
+
+      visit '/'
+
+      expect(page).to have_content('Sign Up or Login')
+
+      expect(page).to have_css('#log_in_div', visible: false)
+
+      find('#logIn').click
+
+      expect(page).to have_css('#log_in_div', visible: true)
+
+      expect(page).to have_content('LOG IN TO ACCESS YOUR ACCOUNT!')
+
+      fill_in :log_username, with: user.user_name
+      fill_in :log_password, with: user.password
+
+      click_on 'LOGIN'
+
+      expect(current_path).to eq('/')
+      expect(page).to have_content('Welcome ChrisPowell')
+    end
+  end
 end

@@ -22,13 +22,23 @@
         <%= submit_tag("SIGN UP") %>
       <% end %>
     </div>
+    <div id='log_in_div'>
+      <p>LOG IN TO ACCESS YOUR ACCOUNT!</p>
+      <%= form_tag("/log_in", method: "post") do %>
+        <%= text_field_tag(:log_username, "Enter Your User Name") %><br>
+        <%= text_field_tag(:log_password, "Enter Your Password") %><br>
+        <%= submit_tag("LOGIN") %>
+      <% end %>
+    </div>
   </body>
   <script>
     $('#signUp').click(() => {
-      $("#sign_up_div").toggle('slow')
+      $("#sign_up_div").toggle('slow'),
+      $("#log_in_div").toggle('slow')
     })
     $(document).ready(
       $('#sign_up_div').hide(),
+      $('#log_in_div').hide(),
       $('#signUp').css('cursor', 'pointer'),
       $('#logIn').css('cursor', 'pointer')
     )
