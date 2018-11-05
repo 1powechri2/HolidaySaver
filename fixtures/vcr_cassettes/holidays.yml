@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://holidayapi.pl/v1/holidays?country=US&year=2018
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Mon, 05 Nov 2018 00:38:54 GMT
+      content-type:
+      - application/json;charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      set-cookie:
+      - __cfduid=d5937c6b05eee58aa1a27a1b213e15f1d1541378333; expires=Tue, 05-Nov-19
+        00:38:53 GMT; path=/; domain=.holidayapi.pl; HttpOnly; Secure, PHPSESSID=jflv8vbd4qm2rrkqceo4k7nkuu;
+        path=/
+      x-powered-by:
+      - PHP/7.2.11, PleskLin
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate
+      pragma:
+      - no-cache
+      expect-ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      server:
+      - cloudflare
+      cf-ray:
+      - 474b429a5f7f9300-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":200,"holidays":{"2018-01-01":[{"name":"Last Day of Kwanzaa","country":"US","date":"2018-01-01"},{"name":"New
+        Year''s Day","country":"US","date":"2018-01-01"}],"2018-01-06":[{"name":"Epiphany","country":"US","date":"2018-01-06"}],"2018-01-07":[{"name":"Orthodox
+        Christmas","country":"US","date":"2018-01-07"}],"2018-01-15":[{"name":"Martin
+        Luther King, Jr. Day","country":"US","date":"2018-01-15"}],"2018-02-02":[{"name":"Groundhog
+        Day","country":"US","date":"2018-02-02"}],"2018-02-14":[{"name":"Ash Wednesday","country":"US","date":"2018-02-14"},{"name":"Valentine''s
+        Day","country":"US","date":"2018-02-14"}],"2018-02-19":[{"name":"Washington''s
+        Birthday","country":"US","date":"2018-02-19"}],"2018-03-08":[{"name":"International
+        Women''s Day","country":"US","date":"2018-03-08"}],"2018-03-17":[{"name":"Saint
+        Patrick''s Day","country":"US","date":"2018-03-17"}],"2018-03-25":[{"name":"Palm
+        Sunday","country":"US","date":"2018-03-25"}],"2018-03-30":[{"name":"Good Friday","country":"US","date":"2018-03-30"}],"2018-04-01":[{"name":"April
+        Fools'' Day","country":"US","date":"2018-04-01"},{"name":"Easter","country":"US","date":"2018-04-01"}],"2018-04-22":[{"name":"Earth
+        Day","country":"US","date":"2018-04-22"}],"2018-04-27":[{"name":"Arbor Day","country":"US","date":"2018-04-27"}],"2018-05-01":[{"name":"May
+        Day","country":"US","date":"2018-05-01"}],"2018-05-04":[{"name":"Star Wars
+        Day","country":"US","date":"2018-05-04"}],"2018-05-05":[{"name":"Cinco de
+        Mayo","country":"US","date":"2018-05-05"}],"2018-05-13":[{"name":"Mother''s
+        Day","country":"US","date":"2018-05-13"}],"2018-05-28":[{"name":"Memorial
+        Day","country":"US","date":"2018-05-28"}],"2018-06-14":[{"name":"Flag Day","country":"US","date":"2018-06-14"}],"2018-06-17":[{"name":"Father''s
+        Day","country":"US","date":"2018-06-17"}],"2018-06-27":[{"name":"Helen Keller
+        Day","country":"US","date":"2018-06-27"}],"2018-07-04":[{"name":"Independence
+        Day","country":"US","date":"2018-07-04"}],"2018-08-26":[{"name":"Women''s
+        Equality Day","country":"US","date":"2018-08-26"}],"2018-09-03":[{"name":"Labor
+        Day","country":"US","date":"2018-09-03"}],"2018-09-09":[{"name":"Grandparent''s
+        Day","country":"US","date":"2018-09-09"}],"2018-09-11":[{"name":"Patriot Day","country":"US","date":"2018-09-11"}],"2018-09-17":[{"name":"Constitution
+        Day","country":"US","date":"2018-09-17"}],"2018-10-06":[{"name":"German-American
+        Day","country":"US","date":"2018-10-06"}],"2018-10-08":[{"name":"Columbus
+        Day","country":"US","date":"2018-10-08"}],"2018-10-09":[{"name":"Leif Erkson
+        Day","country":"US","date":"2018-10-09"}],"2018-10-31":[{"name":"Halloween","country":"US","date":"2018-10-31"}],"2018-11-06":[{"name":"Election
+        Day","country":"US","date":"2018-11-06"}],"2018-11-11":[{"name":"Veterans
+        Day","country":"US","date":"2018-11-11"}],"2018-11-22":[{"name":"Thanksgiving
+        Day","country":"US","date":"2018-11-22"}],"2018-11-23":[{"name":"Black Friday","country":"US","date":"2018-11-23"}],"2018-12-07":[{"name":"Pearl
+        Harbor Remembrance Day","country":"US","date":"2018-12-07"}],"2018-12-08":[{"name":"Immaculate
+        Conception of the Virgin Mary","country":"US","date":"2018-12-08"}],"2018-12-24":[{"name":"Christmas
+        Eve","country":"US","date":"2018-12-24"}],"2018-12-25":[{"name":"Christmas","country":"US","date":"2018-12-25"}],"2018-12-26":[{"name":"First
+        Day of Kwanzaa","country":"US","date":"2018-12-26"}],"2018-12-27":[{"name":"Second
+        Day of Kwanzaa","country":"US","date":"2018-12-27"}],"2018-12-28":[{"name":"Third
+        Day of Kwanzaa","country":"US","date":"2018-12-28"}],"2018-12-29":[{"name":"Fourth
+        Day of Kwanzaa","country":"US","date":"2018-12-29"}],"2018-12-30":[{"name":"Fifth
+        Day of Kwanzaa","country":"US","date":"2018-12-30"}],"2018-12-31":[{"name":"New
+        Year''s Eve","country":"US","date":"2018-12-31"},{"name":"Sixth Day of Kwanzaa","country":"US","date":"2018-12-31"}]}}'
+    http_version: 
+  recorded_at: Mon, 05 Nov 2018 00:38:54 GMT
+recorded_with: VCR 4.0.0
