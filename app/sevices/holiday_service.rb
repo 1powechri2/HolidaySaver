@@ -7,11 +7,10 @@ class HolidayService
   end
 
   def holidays_api_fetch_holidays
-    @fetch ||= holidays_api_conn.get '/v1/holidays?country=US&year=2018'
+    @holidays_api_fetch_holidays ||= holidays_api_conn.get '/v1/holidays?country=US&year=2018'
   end
 
   def holidays_json
     JSON.parse(holidays_api_fetch_holidays.body)
   end
-
 end

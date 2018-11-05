@@ -15,7 +15,7 @@ class HolidayPresenter
   def holidays_enum
     arr = []
     all_holidays.each do |holiday|
-      if holiday["date"] == @date.strftime('%F')
+      if holiday['date'] == @date.strftime('%F')
         arr.push(holiday)
       end
     end
