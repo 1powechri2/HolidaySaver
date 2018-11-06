@@ -1,6 +1,5 @@
 class RootController < ApplicationController
   def show
-    # @holiday_message = HolidayPresenter.new.holidays
-    binding.pry
+    @holiday_message = HolidayPresenter.new.holidays
   end
 end
