@@ -2,6 +2,7 @@ class HolidayPresenter
   def initialize
     @holiday_service = HolidayService.new
     @date = Time.now
+    # @date = Time.now.strftime('%B%e')
   end
 
   def holidays_from_service

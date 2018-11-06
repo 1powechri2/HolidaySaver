@@ -9,11 +9,14 @@ require 'capybara/rails'
 require 'simplecov'
 SimpleCov.start
 
-require 'vcr'
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    # Choose a test framework:
+    with.test_framework :rspec
 
-VCR.configure do |config|
-  config.cassette_library_dir = 'fixtures/vcr_cassettes'
-  config.hook_into :faraday
+    # Choose one or more libraries:
+    with.library :rails
+  end
 end
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -41,7 +44,7 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
-  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+# Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your

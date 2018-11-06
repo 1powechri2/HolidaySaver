@@ -2,8 +2,47 @@
 <html>
   <head>
     <title>Holiday</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
+  <header>
+    <% if current_user != nil %>
+      <span>Holiday Fun Town</span> <span>Welcome <%= current_user.user_name %></span>
+    <% else %>
+      <span>Holiday Fun Town</span> <span id='signUp'>Sign Up</span> or <span id='logIn'>Login</span>
+    <% end %>
+  </header>
   <body>
     <p><%= @holiday_message %></p>
+    <div id='sign_up_div'>
+      <p>SIGN UP TO BECOME A MEMBER!</p>
+      <%= form_tag("/sign_up", method: "post") do %>
+        <%= text_field_tag(:user_name, "Enter A User Name") %><br>
+        <%= text_field_tag(:email, "Enter Your Email") %><br>
+        <%= text_field_tag(:password, "Enter A Password") %><br>
+        <%= submit_tag("SIGN UP") %>
+      <% end %>
+    </div>
+    <div id='log_in_div'>
+      <p>LOG IN TO ACCESS YOUR ACCOUNT!</p>
+      <%= form_tag("/log_in", method: "post") do %>
+        <%= text_field_tag(:log_username, "Enter Your User Name") %><br>
+        <%= text_field_tag(:log_password, "Enter Your Password") %><br>
+        <%= submit_tag("LOGIN") %>
+      <% end %>
+    </div>
   </body>
+  <script>
+    $('#signUp').click(() => {
+      $("#sign_up_div").toggle('slow')
+    })
+    $('#logIn').click(() => {
+      $("#log_in_div").toggle('slow')
+    })
+    $(document).ready(
+      $('#sign_up_div').hide(),
+      $('#log_in_div').hide(),
+      $('#signUp').css('cursor', 'pointer'),
+      $('#logIn').css('cursor', 'pointer')
+    )
+  </script>
 </html>
