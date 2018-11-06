@@ -1,2 +1,3 @@
 class UnofficialHoliday < ApplicationRecord
+
 end
