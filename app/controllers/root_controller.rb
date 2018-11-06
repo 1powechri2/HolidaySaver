@@ -1,5 +1,5 @@
 class RootController < ApplicationController
   def show
-    @holiday_message = HolidayPresenter.new.holidays
+    @holiday_message = UnofficialHoliday.holidays
   end
 end
