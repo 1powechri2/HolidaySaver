@@ -22,7 +22,7 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   # host: db
   # username: postgres
-  # password:
+  # password: <%= ENV['HOLIDAY_DATABASE_PASSWORD'] %>
   # pool: 5
 
 development:

@@ -16,9 +16,9 @@
     <div id='sign_up_div'>
       <p>SIGN UP TO BECOME A MEMBER!</p>
       <%= form_tag("/sign_up", method: "post") do %>
-        <%= text_field_tag(:user_name, "Enter A User Name") %><br>
-        <%= text_field_tag(:email, "Enter Your Email") %><br>
-        <%= text_field_tag(:password, "Enter A Password") %><br>
+        <%= text_field_tag(:user_name, nil, placeholder: "Enter A User Name") %><br>
+        <%= text_field_tag(:email, nil, placeholder: "Enter Your Email") %><br>
+        <%= text_field_tag(:password, nil, placeholder: "Enter A Password") %><br>
         <%= submit_tag("SIGN UP") %>
       <% end %>
     </div>
