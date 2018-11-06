@@ -6,9 +6,10 @@
   </head>
   <header>
     <% if current_user != nil %>
-      <span>Holiday Fun Town</span> <span>Welcome <%= current_user.user_name %></span>
+      <span>Welcome to Wacky Holidays!</span> <span>Welcome <%= current_user.user_name %></span>
     <% else %>
-      <span>Holiday Fun Town</span> <span id='signUp'>Sign Up</span> or <span id='logIn'>Login</span>
+      <span>Welcome to Wacky Holidays!</span> <span id='signUp'>Sign Up To Recieve Emails Everytime a Wacky Holiday Is Approaching</span> or
+      <span id='logIn'>Login To Stop Recieving Emails</span>
     <% end %>
   </header>
   <body>
