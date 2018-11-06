@@ -4,8 +4,6 @@ describe 'User visits root' do
   it 'signs up and is added to the db' do
     visit '/'
 
-    expect(page).to have_content('Sign Up or Login')
-
     expect(page).to have_css('#sign_up_div', visible: false)
 
     find('#signUp').click
@@ -29,8 +27,6 @@ describe 'User visits root' do
                       email: 'dood@doodmail.grrrr')
 
     visit '/'
-
-    expect(page).to have_content('Sign Up or Login')
 
     expect(page).to have_css('#log_in_div', visible: false)
 
