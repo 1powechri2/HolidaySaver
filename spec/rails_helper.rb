@@ -9,13 +9,6 @@ require 'capybara/rails'
 require 'simplecov'
 SimpleCov.start
 
-require 'vcr'
-
-VCR.configure do |config|
-  config.cassette_library_dir = 'fixtures/vcr_cassettes'
-  config.hook_into :faraday
-end
-
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     # Choose a test framework:
