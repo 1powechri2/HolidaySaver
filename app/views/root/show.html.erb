@@ -31,19 +31,59 @@
         <%= submit_tag("LOGIN") %>
       <% end %>
     </div>
+    <div>
+      <input id='searchThingy' type="text" placeholder="Search For Holidays By Key Words">
+    </div>
+    <div id='holidayStorage'>
+    </div>
   </body>
   <script>
+    let holidayDiv = $('#holidayStorage')
+
+    const fetchHolidays = () => {
+      fetch('/api/v1/holidays')
+      .then(response => response.json())
+      .then(days => appendDays(days))
+      .catch(error => console.log({ error }));
+    }
+
+    const appendDays = (days) => {
+      days.forEach(day => {
+        appendDay(day)
+      })
+    }
+
+    const appendDay = (day) => {
+      holidayDiv.append(
+        `<p>${day.name} falls on ${day.day}</p>`
+      )
+    }
+
     $('#signUp').click(() => {
       $("#sign_up_div").toggle('slow')
     })
+
     $('#logIn').click(() => {
       $("#log_in_div").toggle('slow')
     })
+
     $(document).ready(
+      holidayDiv.hide(),
+      fetchHolidays(),
       $('#sign_up_div').hide(),
       $('#log_in_div').hide(),
       $('#signUp').css('cursor', 'pointer'),
       $('#logIn').css('cursor', 'pointer')
     )
+
+    $(document).ready(function(){
+      $("#searchThingy").on("keyup", function() {
+        holidayDiv.show();
+        var value = $(this).val().toLowerCase();
+        $("#holidayStorage p").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
   </script>
 </html>
