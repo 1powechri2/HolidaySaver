@@ -44,28 +44,34 @@ html {
 
 #welcome {
   font-size: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #signUp {
   color: Blue;
+  font-family: 'Spicy Rice', cursive;
 }
 
 #logIn {
   color: blue;
+  font-family: 'Spicy Rice', cursive;
 }
 
 #holidayMessage {
   font-size: 60px;
-  color: red;
+  font-family: 'Rubik', sans-serif;
+  margin-top: 20px;
+  color: #670D00;
 }
 
 #holidayStorage {
   font-size: 30px;
-  color: green;
 }
 
 #searchThingy {
+  margin-top: 20px;
   height: 40px;
   width: 400px;
-  opacity: 0.75;
+  opacity: 0.65;
 }
