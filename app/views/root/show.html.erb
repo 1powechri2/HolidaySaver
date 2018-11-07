@@ -3,12 +3,14 @@
   <head>
     <title>Holiday</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Salsa" rel="stylesheet">
   </head>
   <header>
     <% if current_user != nil %>
       <span>Welcome to Wacky Holidays!</span> <span>Welcome <%= current_user.user_name %></span>
     <% else %>
-      <span>Welcome to Wacky Holidays!</span> <span id='signUp'>Sign Up To Recieve Emails Everytime a Wacky Holiday Is Approaching</span> or
+      <p>Welcome to Wacky Holidays!</p>
+      <span id='signUp'>Sign Up To Recieve Emails Everytime a Wacky Holiday Is Approaching</span> or
       <span id='logIn'>Login To Stop Recieving Emails</span>
     <% end %>
   </header>
