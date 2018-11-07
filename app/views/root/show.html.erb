@@ -5,17 +5,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Salsa" rel="stylesheet">
   </head>
-  <header>
+  <header id='header'>
     <% if current_user != nil %>
       <span>Welcome to Wacky Holidays!</span> <span>Welcome <%= current_user.user_name %></span>
     <% else %>
-      <p>Welcome to Wacky Holidays!</p>
-      <span id='signUp'>Sign Up To Recieve Emails Everytime a Wacky Holiday Is Approaching</span> or
-      <span id='logIn'>Login To Stop Recieving Emails</span>
+      <p id='welcome'>Welcome to Wacky Holidays!</p>
+      <span id='signUp'>Sign Up</span> To Recieve Emails Everytime a Wacky Holiday Is Approaching or
+      <span id='logIn'>Login</span> To Stop Recieving Emails
     <% end %>
   </header>
-  <body>
-    <p><%= @holiday_message %></p>
+  <body id='body'>
+    <p id='holidayMessage'><%= @holiday_message %></p>
     <div id='sign_up_div'>
       <p>SIGN UP TO BECOME A MEMBER!</p>
       <%= form_tag("/sign_up", method: "post") do %>

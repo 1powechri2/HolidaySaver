@@ -32,3 +32,40 @@ html {
 	background-attachment: fixed;
   font-family: 'Salsa', cursive;
 }
+
+#header {
+  text-align: center;
+  font-size: 30px;
+}
+
+#body {
+  text-align: center;
+}
+
+#welcome {
+  font-size: 60px;
+}
+
+#signUp {
+  color: Blue;
+}
+
+#logIn {
+  color: blue;
+}
+
+#holidayMessage {
+  font-size: 60px;
+  color: red;
+}
+
+#holidayStorage {
+  font-size: 30px;
+  color: green;
+}
+
+#searchThingy {
+  height: 40px;
+  width: 400px;
+  opacity: 0.75;
+}
