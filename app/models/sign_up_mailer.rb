@@ -24,7 +24,7 @@ class SignUpMailer
   def send_mail
     from = SendGrid::Email.new(email: 'noreply@wacky_holidays')
     to = SendGrid::Email.new(email: @mail)
-    subject = 'Welcome to Skate Spotting'
+    subject = 'Welcome to Wacky Holidays'
     content = SendGrid::Content.new(type: 'text/html', value: template)
     mail = SendGrid::Mail.new(from, subject, to, content)
 
