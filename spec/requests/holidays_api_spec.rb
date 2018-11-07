@@ -6,7 +6,7 @@ describe 'Holidays API endpoint' do
 
     expect(response).to be_successful
     holidays = JSON.parse(response.body)
-    expect(holidays.length).to eq(399)
+    expect(holidays.length).to eq(400)
     expect(holidays.first['name']).to eq('National Trivia Day')
     expect(holidays.first['day']).to eq('January 4')
   end
