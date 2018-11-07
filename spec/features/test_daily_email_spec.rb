@@ -12,6 +12,6 @@ describe 'If a holiday happens on current date' do
 
     allow(UnofficialHoliday).to receive(:holidays_enum).and_return([holiday])
 
-    # UnofficialHoliday.cron_mailer
+     
   end
 end
