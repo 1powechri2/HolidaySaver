@@ -82,12 +82,15 @@
 
     $(document).ready(function(){
       $("#searchThingy").on("keyup", function() {
+        if ($("#searchThingy").val() == ""){
+          holidayDiv.hide();
+        } else {
         holidayDiv.show();
         var value = $(this).val().toLowerCase();
         $("#holidayStorage p").filter(function() {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
         });
-      });
+      }});
     });
   </script>
 </html>
