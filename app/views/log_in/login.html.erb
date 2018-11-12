@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Holiday</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Salsa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet">
+  </head>
+  <header id='header'>
+    <p>Hello <%= current_user.user_name %>
+  </header>
+  <body id='body'>
+    <p id='holidayMessage'>If You Wish To Discontinue Your Service </p>
+    <%= button_to(name = 'Click Here', options = '/delete_user', html_options = nil) %>
+  </body>
+  <script>
+  </script>
+</html>
