@@ -9,7 +9,9 @@
   </head>
   <header id='header'>
     <% if current_user != nil %>
-      <span>Welcome to Wacky Holidays!</span> <span>Welcome <%= current_user.user_name %></span>
+      <span id='welcome' ><%= current_user.user_name %> Welcome to Wacky Holidays!</span>
+      <p>If You Wish To Discontinue Your Service </p>
+      <%= button_to(name = 'Click Here', options = '/delete_user', html_options = nil) %>
     <% else %>
       <p id='welcome'>Welcome to Wacky Holidays!</p>
       <span id='signUp'>Sign Up</span> To Recieve Emails Everytime a Wacky Holiday Is Approaching or
@@ -30,8 +32,8 @@
     <div id='log_in_div'>
       <p>LOG IN TO ACCESS YOUR ACCOUNT!</p>
       <%= form_tag("/log_in", method: "post") do %>
-        <%= text_field_tag(:log_username, "Enter Your User Name") %><br>
-        <%= text_field_tag(:log_password, "Enter Your Password") %><br>
+        <%= text_field_tag(:log_username, nil, placeholder: "Enter Your User Name") %><br>
+        <%= text_field_tag(:log_password, nil, placeholder: "Enter Your Password") %><br>
         <%= submit_tag("LOGIN") %>
       <% end %>
     </div>
@@ -82,12 +84,15 @@
 
     $(document).ready(function(){
       $("#searchThingy").on("keyup", function() {
+        if ($("#searchThingy").val() == ""){
+          holidayDiv.hide();
+        } else {
         holidayDiv.show();
         var value = $(this).val().toLowerCase();
         $("#holidayStorage p").filter(function() {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
         });
-      });
+      }});
     });
   </script>
 </html>
