@@ -9,7 +9,7 @@
   </head>
   <header id='header'>
     <% if current_user != nil %>
-      <span> <%= current_user.user_name %></span> <span>Welcome to Wacky Holidays!</span>
+      <span id='welcome' ><%= current_user.user_name %> Welcome to Wacky Holidays!</span>
       <p>If You Wish To Discontinue Your Service </p>
       <%= button_to(name = 'Click Here', options = '/delete_user', html_options = nil) %>
     <% else %>

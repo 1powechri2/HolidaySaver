@@ -67,12 +67,13 @@ html {
 
 #holidayStorage {
   font-size: 30px;
-	color: white;
+	color: black;
+	background-color: rgba(255, 255, 255, 0.5);
 	margin: auto;
 	margin-top: 40px;
-  width: 500px;
-  height: 150px;
-	border: 10px solid red;
+  width: 1000px;
+  height: 125px;
+	border: 2px solid red;
   overflow: scroll;
 }
 
