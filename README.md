@@ -2,7 +2,7 @@
 
 #### Wacky Holidays is an app that informs you on America's Unconventional Holidays
 
-app url: https://morning-shore-61258.herokuapp.com/
+app url: https://morning-shore-61258.herokuapp.com
 
 ![Alt text](./app/assets/images/root_page.png?raw=true)
 
