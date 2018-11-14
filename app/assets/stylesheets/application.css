@@ -78,8 +78,21 @@ html {
 }
 
 #searchThingy {
+	font-family: 'Salsa', cursive;
+	font-size: 25px;
   margin-top: 20px;
   height: 40px;
   width: 400px;
   opacity: 0.65;
+	padding: 0px 10px;
+}
+
+#searchThingy::placeholder {
+  font-family: 'Salsa', cursive;
+	font-size: 15px;
+	text-align: center;
+}
+
+#searchThingy[type=text]:focus {
+  border: 3px solid #555;
 }

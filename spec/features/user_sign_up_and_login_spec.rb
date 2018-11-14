@@ -19,7 +19,7 @@ describe 'User visits root' do
     click_on 'SIGN UP'
 
     expect(current_path).to eq('/')
-    expect(page).to have_content('Welcome ChrisPowell')
+    expect(page).to have_content('ChrisPowell Welcome')
   end
   it 'logs in' do
     user = User.create(user_name: 'ChrisPowell',
@@ -41,7 +41,6 @@ describe 'User visits root' do
 
     click_on 'LOGIN'
 
-    expect(current_path).to eq('/')
-    expect(page).to have_content('Welcome ChrisPowell')
+    expect(current_path).to eq('/log_in')
   end
 end
