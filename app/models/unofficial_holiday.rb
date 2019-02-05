@@ -3,7 +3,7 @@ class UnofficialHoliday < ApplicationRecord
   @date = Time.now
 
   def self.holidays_enum
-    where(day: @date.strftime('%B %e'))
+    where('day =  ? or day = ?', @date.strftime('%B %e'), @date.strftime('%B%e'))
   end
 
   def self.current_holiday
